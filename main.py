@@ -1,31 +1,33 @@
 import pygame
 
-# Initialize Pygame
+
 pygame.init()
 
-# Set up the display
 width, height = 800, 600
 screen = pygame.display.set_mode((width, height))
 pygame.display.set_caption("Moving Square")
 
-# Define colors
 BLACK = (0, 0, 0)
+WHITE = (255, 255, 255)
 RED = (255, 0, 0)
+GREEN = (0, 255, 0)
+BLUE = (0, 0, 255)
+YELLOW = (255, 255, 0)
+CYAN = (0, 255, 255)
+MAGENTA = (255, 0, 255)
 
-# Create the player square
+
 player_size = 50
 player_x = width // 2 - player_size // 2
 player_y = height // 2 - player_size // 2
 player_speed = 3
 
-
-# Define square properties
 square_size = 30
 square_x = width // 2 - square_size // 2
 square_y = height // 2 - square_size // 2
 square_speed = 2
 
-# Game loop
+
 running = True
 clock = pygame.time.Clock()
 
@@ -81,8 +83,6 @@ while running:
             button['current_color'] = button['pressed_color']
         else:
             button['current_color'] = button['color']
-
-
 
 
     # Move the square based on button presses
